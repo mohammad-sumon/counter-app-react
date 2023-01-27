@@ -9,9 +9,9 @@ const Son = () => {
 
   const reducer = (state, action) => {
     if (action.type === "INCREMENT") {
-      return state + 1;
+      return state + action.payload.count;
     } else if (action.type === "DECREMENT") {
-      return state - 1;
+      return state - action.payload.count;
     }
   };
 
@@ -23,13 +23,13 @@ const Son = () => {
       <span>
         <button
           className="btn-less"
-          onClick={() => dispatch({ type: "DECREMENT" })}
+          onClick={() => dispatch({ type: "DECREMENT", payload: { count: 2 } })}
         >
           Decrement
         </button>
         <button
           className="btn-add"
-          onClick={() => dispatch({ type: "INCREMENT" })}
+          onClick={() => dispatch({ type: "INCREMENT", payload: { count: 2 } })}
         >
           Increment
         </button>
