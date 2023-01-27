@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CountContext } from "../../App";
+import Son from "../Son/Son";
 import "./Child.css";
 
 const Child = () => {
@@ -19,6 +20,7 @@ const Child = () => {
           Increment
         </button>
       </span>
+      <Son></Son>
     </div>
   );
 };
