@@ -5,12 +5,22 @@
   margin-top: 100px;
   border-width: 5px;
   border-style: solid;
-  border-image: linear-gradient(to right, rgb(108, 12, 149), darkorchid) 10;
+  border-image: linear-gradient(to right, rgb(108, 12, 149), rgb(166, 102, 231))
+    1;
   box-shadow: 10px 13px 26px -10px rgba(89, 81, 90, 0.67);
 }
 
-.child-main button {
+.btn-less {
   background-color: rgb(166, 102, 231);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.btn-add {
+  background-color: rgb(78, 175, 175);
   color: white;
   padding: 10px;
   border-radius: 10px;

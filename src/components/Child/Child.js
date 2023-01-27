@@ -8,8 +8,12 @@ const Child = () => {
       <h2>Child</h2>
       <p>{count}</p>
       <span>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
-        <button onClick={() => setCount(count - 1)}>Decrement</button>
+        <button className="btn-less" onClick={() => setCount(count - 1)}>
+          Decrement
+        </button>
+        <button className="btn-add" onClick={() => setCount(count + 1)}>
+          Increment
+        </button>
       </span>
     </div>
   );
