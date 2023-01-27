@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { CountContext } from "../../App";
 import "./Child.css";
 
 const Child = () => {
-  const [count, setCount] = useState(0);
+  const { count, setCount } = useContext(CountContext);
   return (
     <div className="child-main">
       <h2>Child</h2>
@@ -11,7 +12,10 @@ const Child = () => {
         <button className="btn-less" onClick={() => setCount(count - 1)}>
           Decrement
         </button>
-        <button className="btn-add" onClick={() => setCount(count + 1)}>
+        <button
+          className="btn-add"
+          onClick={() => setCount((prvState) => prvState + 1)}
+        >
           Increment
         </button>
       </span>
